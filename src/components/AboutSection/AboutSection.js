@@ -25,7 +25,7 @@ export const AboutSection = () => {
                         <div
                             className="about_content-img"
                         >
-                            <img src={WebDeveloperImg}/>
+                            <img src={WebDeveloperImg} alt="gif demonstrativo"/>
                         </div>
                         <div className="about_content-phrase">
                         <h3 data-aos="fade-up">Sobre mim</h3>

@@ -45,9 +45,9 @@ export const ContactServices = () => {
                     </div>
         
                     <div class="phone">
-                    <a href="#" target="_blank"
-                        ><i class="fab fa-whatsapp"></i
-                    ></a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-whatsapp" />
+                    </a>
                     <h4>Telefone:</h4>
                     <p>(11) 96018-8549</p>
                     </div>

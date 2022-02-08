@@ -5,7 +5,7 @@ export const ShowCase = () => {
     return (
         <div className="show-case">
             <div className="show-case__logo-mobile">
-                <img src={ShowCaseImg}/>
+                <img src={ShowCaseImg} alt=""/>
             </div>
             <div className="show-case__presentation">
                 <h1 className="show-case__presentation-title">
@@ -22,7 +22,7 @@ export const ShowCase = () => {
                 </button>
             </div>
             <div className="show-case__logo">
-                <img src={ShowCaseImg}/>
+                <img src={ShowCaseImg} alt=""/>
             </div>
         </div>  
     )
