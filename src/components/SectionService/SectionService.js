@@ -31,7 +31,9 @@ export const SectionService = ()=> {
                 <div className="icon-box">
                     <a target="_blank" href="https://nextjs.org/" rel="noreferrer">
                     <div className="icon"><i className="fab fa-react"></i></div>
-                    <h4 className="title"><a>Next JS</a></h4>
+                    <h4 className="title">
+                        Next JS
+                    </h4>
                     <p className="description">
                         Permite o desenvolvimento de 
                         aplicações React tanto front-end quanto back-end.

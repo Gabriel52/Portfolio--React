@@ -45,7 +45,7 @@ export const ContactServices = () => {
                     </div>
         
                     <div class="phone">
-                    <a href="#" target="_blank">
+                    <a target="_blank" href>
                         <i class="fab fa-whatsapp" />
                     </a>
                     <h4>Telefone:</h4>
