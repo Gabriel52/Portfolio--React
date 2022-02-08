@@ -1,0 +1,75 @@
+#about .btn-get-cv {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    color: #fff;
+    margin-top:10px;
+    text-decoration: none;
+    background: #6b4798;
+}
+#about .btn-get-cv:hover {
+    background: #6b4798b8;
+    transform: scale(1.2);
+}
+.about h3 {
+    font-weight: 700;
+    font-size: 34px;
+    color: #4e4039;
+}
+
+.about p {
+    font-size: 17px;
+    color: #5a6570;
+}
+
+.about_content {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    background-color: #f0f0f5;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 991px) {
+    .about .about-img img {
+        max-width: 70%;
+    }
+    .about_content {
+        display: grid;
+    }
+    .about_content-img img {
+        width: 300px;
+        margin: 0 auto;
+        display: block;        
+    }
+    .btn-get-cv {
+        width: 84%;
+        text-align: center;
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+        
+    }
+}
+
+@media (max-width: 767px) {
+    .about .about-img img {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,104 @@
+.contact {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #d5cae330;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #4e4039;
+    text-align: center;
+}
+.contact .info {
+    border-top: 3px solid #6b4798;
+    border-bottom: 3px solid #6b4798;
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+}
+.contact .info i {
+    font-size: 20px;
+    color: #6b4798;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #d5cae330;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #6b4798;
+}
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #5a6570;
+}
+.contact .info .email p {
+    padding-top: 5px;
+}
+.contact .info .social-links {
+    padding-left: 60px;
+}
+.contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+.contact .info i:hover {
+    background: #6b4798;
+    color: #fff;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 575px) {
+    .contact .info {
+        width: 75%;
+    }
+}
