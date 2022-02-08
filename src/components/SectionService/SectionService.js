@@ -48,7 +48,7 @@ export const SectionService = ()=> {
                 <div className="icon-box">
                     <a target="_blank" href="https://styled-components.com/" rel="noreferrer">
                     <div className="icon"><i className="fab fa-css3-alt"></i></div>
-                    <h4 className="title"><a>Typescript</a></h4>
+                    <h4 className="title">Typescript</h4>
                     <p className="description">
                         Trata-se de uma biblioteca (lib) que nos permite escrever
                         códigos CSS dentro do JavaScript
