@@ -47,12 +47,16 @@
 
 .nav-item {
   font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 110%;
-    color: #5A6570;
-    transition: all 400ms ease;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 110%;
+  color: #5A6570;
+  transition: all 400ms ease;
+}
+
+.nav-item a {
+  color: #fff;
 }
 
 .nav-item:after {
