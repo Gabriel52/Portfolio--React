@@ -65,7 +65,7 @@ export const SectionService = ()=> {
                 <div className="icon-box">
                     <a target="_blank" href="https://sass-lang.com/" rel="noreferrer">
                     <div className="icon"><i className="fab fa-sass"></i></div>
-                    <h4 className="title"><a>SASS</a></h4>
+                    <h4 className="title">SASS</h4>
                     <p className="description">
                         Com ele podemos dar "super poderes" ao nosso CSS
                     </p>
@@ -81,7 +81,7 @@ export const SectionService = ()=> {
                 <div className="icon-box">
                     <a target="_blank" href="https://devdocs.io/javascript/" rel="noreferrer">
                     <div className="icon"><i className="fab fa-js"></i></div>
-                    <h4 className="title"><a>JavaScript</a></h4>
+                    <h4 className="title">JavaScript</h4>
                     <p className="description">
                         Uma das linguagens de programação mais utilizadas hoje em dia
                     </p>
@@ -97,7 +97,7 @@ export const SectionService = ()=> {
                 <div className="icon-box">
                     <a target="_blank" href="https://pt-br.reactjs.org/docs/getting-started.html" rel="noreferrer">
                     <div className="icon"><i className="fab fa-react"></i></div>
-                    <h4 className="title"><a>React JS</a></h4>
+                    <h4 className="title">React JS</h4>
                     <p className="description">
                         Biblioteca usada para construir interface de usuário (UI)
                     </p>
@@ -111,7 +111,7 @@ export const SectionService = ()=> {
                 <div className="icon-box">
                     <a target="_blank" href="https://reactnative.dev/docs/getting-started" rel="noreferrer">
                     <div className="icon"><i className="fab fa-react"></i></div>
-                    <h4 className="title"><a>React Native</a></h4>
+                    <h4 className="title">React Native</h4>
                     <p className="description">
                         Framework para desenvolvimento de aplicativos para Android e
                         iOS de forma nativa
@@ -126,7 +126,7 @@ export const SectionService = ()=> {
                     <div className="icon-box">
                         <a target="_blank" href="https://git-scm.com/docs/git/pt_BR" rel="noreferrer">
                         <div className="icon"><i className="fab fa-git-alt"></i></div>
-                        <h4 className="title"><a>Git</a></h4>
+                        <h4 className="title">Git</h4>
                         <p className="description">
                             É um sistema de controle de versões distribuído
                         </p>
@@ -140,7 +140,7 @@ export const SectionService = ()=> {
                     <div className="icon-box">
                         <a target="_blank" href="https://git-scm.com/docs/git/pt_BR" rel="noreferrer">
                         <div className="icon"><i className="fab fa-node"></i></div>
-                        <h4 className="title"><a>Node JS</a></h4>
+                        <h4 className="title">Node JS</h4>
                         <p className="description">
                             É uma plataforma em que é possível criar aplicações Javascript sem depender de um browser para a execução.
                         </p>
