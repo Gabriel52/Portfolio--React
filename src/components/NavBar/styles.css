@@ -55,10 +55,6 @@
   transition: all 400ms ease;
 }
 
-.nav-item a {
-  color: #fff;
-}
-
 .nav-item:after {
   content: "";
   display: block;
@@ -123,4 +119,9 @@
     cursor: pointer;
     color: #6B4798;
   }
+  
+  .nav-item a {
+    color: #fff;
+  }
+
 }
