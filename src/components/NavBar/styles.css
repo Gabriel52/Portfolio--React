@@ -15,6 +15,8 @@
   width: 100%;
   height: 80px;
   max-width: 1500px;
+
+
 }
 
 .nav-logo {
@@ -75,6 +77,14 @@
 
 .nav-icon {
   display: none;
+}
+
+.select_language {
+  width: 129px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+
+  background-color: rgb(161 152 152 / 77%);
 }
 
 @media screen and (max-width: 960px) {

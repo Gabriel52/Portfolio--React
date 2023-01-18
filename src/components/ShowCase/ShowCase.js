@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import ShowCaseImg from '../../assets/web-developer.svg'
 import './styles.css'
 
 export const ShowCase = () => {
+    const { t: translate } = useTranslation();
+
     return (
         <div className="show-case">
             <div className="show-case__logo-mobile">
@@ -9,15 +12,21 @@ export const ShowCase = () => {
             </div>
             <div className="show-case__presentation">
                 <h1 className="show-case__presentation-title">
-                    Prazer,
+                    {translate('home.presentation')}
                 </h1>
                 <h1 className="show-case__presentation-title">
-                    Eu sou o Gabriel!
+                    {translate('home.whoIsIt')}
                 </h1>
-                <p className="show-case__presentation-occupation">Desenvolvedor Front-end</p>
+                <p className="show-case__presentation-occupation">{translate('home.occupation')}</p>
                 <button className="show-case__presentation-button">
-                    <a className="show-case__presentation-button-link" href="https://mywhats.net/brune" target="_blank" rel="noreferrer">
-                        Vamos conversar?!
+                    <a 
+                        className="show-case__presentation-button-link" 
+                        // href="https://mywhats.net/brune" 
+                        href={translate('home.invitationLink')}
+                        target="_blank" 
+                        rel="noreferrer"
+                    >
+                        {translate('home.invite')}?!
                     </a>
                 </button>
             </div>

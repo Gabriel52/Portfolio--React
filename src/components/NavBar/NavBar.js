@@ -1,10 +1,22 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 function NavBar() {
   const [click, setClick] = useState(false);
+  const { t:translate } = useTranslation() 
+  const [items] = useState(translate('header.items'));
+  const { i18next } = useTranslation()
 
   const handleClick = () => setClick(!click);
+
+  const handleChangeLanguages = (event) =>{
+    let selectLanguage = event.target.value
+    console.log(selectLanguage)
+    i18next.changeLanguage('ptBR')
+    
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -15,56 +27,26 @@ function NavBar() {
           </a>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <a
-                href="#home"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Sobre mim
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="/#services"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Tecnologias
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#portfolio"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Projetos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contatos
-              </a>
-            </li>
+            {items?.map((item)=>(
+              <li className="nav-item">
+                <a
+                  href={item.link}
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handleClick}
+                >
+                  {item.name}
+                </a>
+              </li>  
+            ))}
+            <select 
+              className="select_language" 
+              name="select" 
+              onClick={handleChangeLanguages}
+            >
+              <option value="ptBR"selected >Português</option>
+              <option value="en" >English</option>
+            </select>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>

@@ -1,6 +1,8 @@
 import './styles.css'
 import WebDeveloperImg from '../../assets/webDeveloper.gif'
+import { useTranslation } from 'react-i18next';
 export const AboutSection = () => {
+    const { t: translate } = useTranslation();
 
     const addReveal = () => {
         const reveals = document.querySelectorAll('.reveal');
@@ -28,18 +30,17 @@ export const AboutSection = () => {
                             <img src={WebDeveloperImg} alt="gif demonstrativo"/>
                         </div>
                         <div className="about_content-phrase">
-                        <h3 data-aos="fade-up">Sobre mim</h3>
+                        <h3 data-aos="fade-up">{translate('aboutMe.title')}</h3>
                         <div className="about_content-phrase-typography" >
                             <p data-aos="fade-up" data-aos-delay="90">
-                                Atualmente estou atuando como Desenvolvedor front-end React JS/Next JS.
+                                {translate('aboutMe.firstSentence')}
                             </p>
                             <p data-aos="fade-up" data-aos-delay="90">
-                                Cursando Ciência da Computação na Anhembi Morumbi, formado
-                                em Desenvolvimento de Sistemas pela Etec de Embu.
+                                {translate('aboutMe.secondSentence')}
                             </p>
 
                             <p data-aos="fade-up" data-aos-delay="90">
-                                Em meu dia-a-dia utilizo estas tecnologias
+                                {translate('aboutMe.thirdSentence')}
                             </p>
 
                             <p data-aos="fade-up" data-aos-delay="90">
@@ -51,11 +52,11 @@ export const AboutSection = () => {
 
                             <p data-aos="fade-up" data-aos-delay="10">
                             <a
-                                href="https://drive.google.com/file/d/19E0j-auJzk7HD1xvrK_0rGLUQ1R_kjFu/view"
+                                href={translate('aboutMe.linkMyResume')}
                                 className="btn-get-cv"
                                 target="_blank" rel="noreferrer"
                             >
-                                Confira meu CV
+                                {translate('aboutMe.resumeButton')}
                             </a>
                             </p>
                         </div>

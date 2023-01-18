@@ -3,8 +3,11 @@ import "./styles.css";
 import GitHubImg from '../../assets/gitHub.svg'
 import WhatsappImg from '../../assets/whatsapp.svg'
 import LinkedinImg from '../../assets/linkedin.svg'
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+    const {t:translate} = useTranslation();
+
     return (
         <footer id="footer">
             <section id="social" class="social">
@@ -16,7 +19,7 @@ export const Footer = () => {
                     data-aos-delay="400"
                 >
                     <div class="footer-links">
-                    <p>Onde me encontrar:</p>
+                    <p>{translate('network.title')}:</p>
                     <div class="social-links">
                         <a 
                             target="_blank" 

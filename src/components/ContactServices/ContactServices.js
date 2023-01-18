@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import './styles.css'
 
 export const ContactServices = () => {
+    const { t:translate } = useTranslation();
     
     const addReveal = () => {
         const reveals = document.querySelectorAll('.reveal');
@@ -21,8 +23,8 @@ export const ContactServices = () => {
         <section id="contact" class="contact">
             <div class="container">
             <div class="section-title reveal" data-aos="fade-up">
-                <h2>Contatos</h2>
-                <p>Entre em contato para começarmos</p>
+                <h2>{translate('contact.title')}</h2>
+                <p>{translate('contact.subtitle')}</p>
             </div>
         
             <div class="contact__content">
@@ -34,13 +36,13 @@ export const ContactServices = () => {
                 <div class="info reveal">
                     <div class="address">
                     <i class="fas fa-map-marked-alt"></i>
-                    <h4>Localização:</h4>
+                    <h4>{translate('contact.location')}:</h4>
                     <p>Embu das Artes - SP, Brasil</p>
                     </div>
         
                     <div class="email">
                     <i class="far fa-envelope"></i>
-                    <h4>Email:</h4>
+                    <h4>{translate('contact.email')}:</h4>
                     <p>gabrielbrune52@gmail.com</p>
                     </div>
         
@@ -48,7 +50,7 @@ export const ContactServices = () => {
                     <a target="_blank" href>
                         <i class="fab fa-whatsapp" />
                     </a>
-                    <h4>Telefone:</h4>
+                    <h4>{translate('contact.phone')}:</h4>
                     <p>(11) 96018-8549</p>
                     </div>
                 </div>

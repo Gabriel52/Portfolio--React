@@ -5,8 +5,12 @@ import BeTheHeroImg from '../../assets/screen-be-the-hero.png'
 import ProjectClockImg from '../../assets/screen-relogio.png'
 import ProffyImg from '../../assets/screen-proffy.png'
 import EcoletaImg from '../../assets/screen-ecoleta.png'
+import { useTranslation } from 'react-i18next'
 
 export const PortfolioSection = ()=> {
+    const { t: translate} = useTranslation()
+
+
     const addReveal = () => {
         const reveals = document.querySelectorAll('.reveal');
         reveals.forEach((reveal, index) => {
@@ -22,13 +26,12 @@ export const PortfolioSection = ()=> {
     }
     window.addEventListener('scroll', addReveal)
 
-
     return (
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="section-title reveal" data-aos="fade-up">
-                <h2>Projetos Pessoais</h2>
-                <p>Confira meus projetos</p>
+                <h2>{translate('projects.title')}</h2>
+                <p>{translate('projects.subtitle')}</p>
                 </div>
                 <div
                 class="portfolio-container"

@@ -37,4 +37,24 @@ export const GlobalStyled = createGlobalStyle`
     html{
         scroll-behavior: smooth;
     }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: blue orange;
+        }
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: rgb(161 152 152 / 77%);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 20px;
+        border: 3px solid #6b4798b8;
+    }
 `
