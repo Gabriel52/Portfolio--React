@@ -6,14 +6,13 @@ function NavBar() {
   const [click, setClick] = useState(false);
   const { t:translate } = useTranslation() 
   const [items] = useState(translate('header.items'));
-  const { i18next } = useTranslation()
+  const { i18n } = useTranslation()
 
   const handleClick = () => setClick(!click);
 
   const handleChangeLanguages = (event) =>{
     let selectLanguage = event.target.value
-    console.log(selectLanguage)
-    i18next.changeLanguage('ptBR')
+    i18n.changeLanguage(selectLanguage);
     
   }
 
@@ -45,7 +44,7 @@ function NavBar() {
               onClick={handleChangeLanguages}
             >
               <option value="ptBR"selected >Português</option>
-              <option value="en" >English</option>
+              <option value="enUs" >English</option>
             </select>
           </ul>
           <div className="nav-icon" onClick={handleClick}>

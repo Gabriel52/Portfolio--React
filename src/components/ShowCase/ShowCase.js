@@ -21,7 +21,6 @@ export const ShowCase = () => {
                 <button className="show-case__presentation-button">
                     <a 
                         className="show-case__presentation-button-link" 
-                        // href="https://mywhats.net/brune" 
                         href={translate('home.invitationLink')}
                         target="_blank" 
                         rel="noreferrer"
