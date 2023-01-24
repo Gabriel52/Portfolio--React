@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useTranslation } from 'react-i18next';
 import './styles.css'
 
@@ -47,7 +48,11 @@ export const ContactServices = () => {
                     </div>
         
                     <div class="phone">
-                    <a target="_blank" href>
+                    <a 
+                        href={translate('home.invitationLink')}
+                        target="_blank" 
+                        rel="noreferrer"
+                    >
                         <i class="fab fa-whatsapp" />
                     </a>
                     <h4>{translate('contact.phone')}:</h4>
