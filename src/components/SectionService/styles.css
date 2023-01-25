@@ -17,6 +17,7 @@ a {
     text-align: center;
     border-bottom: 3px solid #fff;
     min-height: 200px;
+    height: 300px;
 }
 .section-title{
     font-weight: 700;

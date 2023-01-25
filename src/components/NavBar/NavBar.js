@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./styles.css";
 
+const languageKey = {
+  ptBr: 'Português',
+  enUs: 'English'
+}
+
 function NavBar() {
   const [click, setClick] = useState(false);
   const { t:translate } = useTranslation() 
   const [items] = useState(translate('header.items'));
   const { i18n } = useTranslation()
-
   const handleClick = () => setClick(!click);
-
-  const handleChangeLanguages = (event) =>{
-    let selectLanguage = event.target.value
-    i18n.changeLanguage(selectLanguage);
+  const [languageSelected, setLanguageSelected] = useState('ptBr')
+  const handleChangeLanguages = () =>{
+    let selectedItem = languageSelected === 'ptBr'? 'enUs' : 'ptBr' 
+    setLanguageSelected(selectedItem)
+    i18n.changeLanguage(selectedItem);
     
   }
 
@@ -38,14 +43,19 @@ function NavBar() {
                 </a>
               </li>  
             ))}
-            <select 
-              className="select_language" 
-              name="select" 
+            <input 
+              className="toggle" 
+              type="checkbox" 
+              role="switch" 
+              name="toggle" 
+              value="on" 
               onClick={handleChangeLanguages}
-            >
-              <option value="ptBR"selected >Português</option>
-              <option value="enUs" >English</option>
-            </select>
+            />
+            <div className="curtain">
+              <p className="selected-language">
+                {languageKey[languageSelected]}
+              </p>
+            </div>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>

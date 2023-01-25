@@ -55,6 +55,9 @@
   line-height: 110%;
   color: #5A6570;
   transition: all 400ms ease;
+  
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .nav-item:after {
@@ -85,7 +88,64 @@
   border-radius: 5px;
 
   background-color: rgb(161 152 152 / 77%);
+  padding: 10px 15px;
 }
+
+.selected-language {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* ________________TOGGLE___________________________ */
+
+.toggle, .toggle:before, .slot__label {
+  transition-property: background-color, transform, visibility;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in, cubic-bezier(0.6,0.2,0.4,1.5), linear;
+}
+.toggle:before, .slot, .slot__label {
+  display: block;
+}
+.toggle:before{ 
+  position: absolute;
+}
+.toggle:checked {
+  background-color: #6b4798;
+}
+.toggle:focus {
+  outline: transparent;
+}
+.toggle {
+  border-radius: 0.75em;
+  box-shadow: 0 0 0 0.1em inset;
+  cursor: pointer;
+  position: relative;
+  margin-right: 0.25em;
+  width: 3em;
+  height: 1.5em;
+
+  appearance: none;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.toggle:before {
+  background: currentColor;
+  border-radius: 50%;
+  content: "";
+  top: 0.2em;
+  left: 0.2em;
+  width: 1.1em;
+  height: 1.1em;
+}
+.toggle:checked:before {
+  transform: translateX(1.5em);
+}
+
+/* __________________________________________ */
+
+
 
 @media screen and (max-width: 960px) {
   .nav-menu {
@@ -117,6 +177,8 @@
     padding: 1.5rem;
     width: 100%;
     display: table;
+    text-align: initial;
+    font-size: 30px;
   }
 
   .nav-icon {
@@ -134,4 +196,27 @@
     color: #fff;
   }
 
+  .toggle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    height: 3em;
+    border-radius: 25px;
+    background-color: white;
+  }
+
+  .toggle:before{
+    top: 0.4em;
+    left: 0.5em;
+    width: 2em;
+    height: 2em;
+  }
+
+  .toggle:checked:before {
+    transform: translateX(3em);
+  }
+
+  .selected-language{
+    font-size: 24px;
+  }
 }
