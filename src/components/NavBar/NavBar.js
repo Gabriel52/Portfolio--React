@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+
 import "./styles.css";
 
 const languageKey = {
@@ -56,6 +58,11 @@ function NavBar() {
             <div className="curtain">
               <p className="selected-language">
                 {languageKey[languageSelected]}
+                {languageSelected === 'ptBr' ? (
+                  <img  src='/images/brazil.png' alt="Brazil's Flag" />
+                ): (
+                  <img  src='/images/united-states.png' alt="United States Flag" />
+                )}
               </p>
             </div>
           </ul>
