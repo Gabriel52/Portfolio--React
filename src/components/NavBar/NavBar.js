@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./styles.css";
 
@@ -10,7 +10,7 @@ const languageKey = {
 function NavBar() {
   const [click, setClick] = useState(false);
   const { t:translate } = useTranslation() 
-  const [items] = useState(translate('header.items'));
+  const [items, setItems] = useState();
   const { i18n } = useTranslation()
   const handleClick = () => setClick(!click);
   const [languageSelected, setLanguageSelected] = useState('ptBr')
@@ -20,7 +20,9 @@ function NavBar() {
     i18n.changeLanguage(selectedItem);
     
   }
-
+  useEffect(()=>{
+    setItems(translate('header.items'))
+  },[translate])
   return (
     <>
       <nav className="navbar">
