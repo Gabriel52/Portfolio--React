@@ -95,6 +95,11 @@
   font-weight: bold;
   font-size: 14px;
   margin-left: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 9px;
 }
 
 /* ________________TOGGLE___________________________ */
@@ -154,7 +159,7 @@
     width: 100%;
     border-top: 1px solid #fff;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
