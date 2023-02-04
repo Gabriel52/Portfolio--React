@@ -29,8 +29,8 @@ export const PORTUGUESE_LANGUAGE =  {
             subtitle: 'Confira as tecnologias que mais utilizo',
             listTechnologies: [
                 {id: '1', name: 'Next JS', description: 'Next.js é um framework React com foco em produção e eficiência criado e mantido pela equipe da Vercel.'},
-                {id: '2', name: 'Typescript', description: 'O TypeScript adiciona sintaxe adicional ao JavaScript para oferecer suporte a uma integração mais estreita com seu editor. Detectar erros no início do seu editor.'},
-                {id: '3', name: 'Sass', description: 'Sass é uma extensão do CSS. Sass é um pré-processador CSS. Sass é totalmente compatível com todas as versões do CSS.'},
+                {id: '2', name: 'Typescript', description: 'O TypeScript adiciona sintaxe ao JavaScript para oferecer suporte a uma integração mais estreita com seu editor. Detectar erros no início do seu editor.'},
+                {id: '3', name: 'Sass', description: 'Sass é um pré-processador CSS. É totalmente compatível com todas as versões do CSS.'},
                 {id: '4', name: 'Javascript', description: ' Uma das linguagens de programação mais utilizadas atualmente.'},
                 {id: '5', name: 'React Js', description: 'Biblioteca usada para construir a interface do usuário (UI).'},
                 {id: '6', name: 'React Native', description: 'Framework para desenvolvimento de aplicativos Android e aplicativos IOS nativos.'},
