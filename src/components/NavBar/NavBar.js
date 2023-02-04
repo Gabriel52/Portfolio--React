@@ -59,9 +59,9 @@ function NavBar() {
               <p className="selected-language">
                 {languageKey[languageSelected]}
                 {languageSelected === 'ptBr' ? (
-                  <img  src='/images/brazil.png' alt="Brazil's Flag" />
-                ): (
                   <img  src='/images/united-states.png' alt="United States Flag" />
+                  ): (
+                  <img  src='/images/brazil.png' alt="Brazil's Flag" />
                 )}
               </p>
             </div>

@@ -56,7 +56,7 @@ export const ContactServices = () => {
                         <i class="fab fa-whatsapp" />
                     </a>
                     <h4>{translate('contact.phone')}:</h4>
-                    <p>(11) 96018-8549</p>
+                    <p>+55 (11)96018-8549</p>
                     </div>
                 </div>
                 </div>
