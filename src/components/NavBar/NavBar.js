@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import "./styles.css";
 
 const languageKey = {
-  ptBr: 'Português',
-  enUs: 'English'
+  ptBr: 'English',
+  enUs: 'Português'
 }
 
 function NavBar() {
@@ -58,10 +58,10 @@ function NavBar() {
             <div className="curtain">
               <p className="selected-language">
                 {languageKey[languageSelected]}
-                {languageSelected === 'ptBr' ? (
-                  <img  src='/images/united-states.png' alt="United States Flag" />
+                {languageSelected !== 'ptBr' ? (
+                    <img  src='/images/brazil.png' alt="Brazil's Flag" />
                   ): (
-                  <img  src='/images/brazil.png' alt="Brazil's Flag" />
+                    <img  src='/images/united-states.png' alt="United States Flag" />
                 )}
               </p>
             </div>
