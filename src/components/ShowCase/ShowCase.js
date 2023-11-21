@@ -25,7 +25,7 @@ export const ShowCase = () => {
                         target="_blank" 
                         rel="noreferrer"
                     >
-                        {translate('home.invite')}!!
+                        {translate('home.invite')}!
                     </a>
                 </button>
             </div>

@@ -84,4 +84,8 @@ a {
         display: grid;
         grid-template-columns: repeat(1, 300px);
     }
+    .container {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
 }

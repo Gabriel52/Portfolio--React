@@ -50,10 +50,12 @@ h1{
 
 /* MOBILE */
 /* ________________________________________________________ */
-@media (max-width: 999px) {
+@media (max-width: 900px) {
     .show-case {
         display: grid;
         gap: 50px;
+        padding-left: 28px;
+        padding-right: 28px;
     }
     h1 {
         font-size: 3rem;
@@ -77,8 +79,8 @@ h1{
     .show-case__presentation-button {
         width: 100%;
         text-align: center;
-        padding-top: 18px;
-        padding-bottom: 18\px;
+        padding-top: 16px;
+        padding-bottom: 16px;
         margin: 0;
     }
 }
