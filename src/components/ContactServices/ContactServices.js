@@ -1,5 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useTranslation } from 'react-i18next';
+import { GrMapLocation } from "react-icons/gr";
+import { BiLogoGmail } from "react-icons/bi";
+import { MdPhoneInTalk } from "react-icons/md";
+
 import './styles.css'
 
 export const ContactServices = () => {
@@ -36,13 +40,17 @@ export const ContactServices = () => {
                 >
                 <div class="info reveal">
                     <div class="address">
-                    <i class="fas fa-map-marked-alt"></i>
+                        <i>
+                            <GrMapLocation className='' />
+                        </i>
                     <h4>{translate('contact.location')}:</h4>
                     <p>Embu das Artes - SP, Brasil</p>
                     </div>
         
                     <div class="email">
-                    <i class="far fa-envelope"></i>
+                    <i>
+                        <BiLogoGmail />
+                    </i>
                     <h4>{translate('contact.email')}:</h4>
                     <p>gabrielbrune52@gmail.com</p>
                     </div>
@@ -53,7 +61,9 @@ export const ContactServices = () => {
                         target="_blank" 
                         rel="noreferrer"
                     >
-                        <i class="fab fa-whatsapp" />
+                        <i>
+                            <MdPhoneInTalk />
+                        </i>
                     </a>
                     <h4>{translate('contact.phone')}:</h4>
                     <p>+55 (11)96018-8549</p>

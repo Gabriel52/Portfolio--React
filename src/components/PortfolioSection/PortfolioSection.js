@@ -1,12 +1,13 @@
 import './styles.css'
+import { useTranslation } from 'react-i18next'
+import { FaGithub } from "react-icons/fa";
+import { IoIosDesktop } from "react-icons/io";
 
 import AluraQuizImg from '../../assets/screen-alura.png'
 import BeTheHeroImg from '../../assets/screen-be-the-hero.png'
 import ProjectClockImg from '../../assets/screen-relogio.png'
 import ProffyImg from '../../assets/screen-proffy.png'
 import EcoletaImg from '../../assets/screen-ecoleta.png'
-import { useTranslation } from 'react-i18next'
-
 export const PortfolioSection = ()=> {
     const { t: translate} = useTranslation()
 
@@ -50,14 +51,14 @@ export const PortfolioSection = ()=> {
                         href="https://github.com/Gabriel52/imersao_alura"
                         class="venobox"
                         title="Alura Quiz - Git Hub"
-                        ><i class="fab fa-github"></i
-                        ></a>
+                        >
+                            <FaGithub />
+                        </a>
                         <a
                         href="https://imersao-alura-pi.vercel.app/"
                         title="Alura Quiz - Hospedagem"
                         target="_blank" rel="noreferrer"
-                        ><i class="fas fa-desktop"></i
-                        ></a>
+                        ><IoIosDesktop /></a>
                     </div>
                     <div class="portfolio-info">
                         <h4>Alura Quiz</h4>
@@ -77,8 +78,7 @@ export const PortfolioSection = ()=> {
                         href="https://github.com/Gabriel52/Projetos_JS/tree/master/Relogio"
                         title="Hora do dia"
                         target="_blank" rel="noreferrer"
-                        ><i class="fab fa-github"></i
-                        ></a>
+                        ><FaGithub /></a>
                     </div>
                     <div class="portfolio-info">
                         <h4>Hora do dia</h4>
@@ -100,8 +100,7 @@ export const PortfolioSection = ()=> {
                         data-gall="portfolioGallery"
                         class="venobox"
                         title="Be the hero"
-                        ><i class="fab fa-github"></i
-                        ></a>
+                        ><FaGithub /></a>
                     </div>
                     <div class="portfolio-info">
                         <h4>Be The Hero</h4>
@@ -123,14 +122,12 @@ export const PortfolioSection = ()=> {
                         data-gall="portfolioGallery"
                         class="venobox"
                         title="Proffy - Git Hub"
-                        ><i class="fas fa-desktop"></i
-                        ></a>
+                        ><IoIosDesktop /></a>
                         <a
                         href="https://stupefied-turing-6a35f2.netlify.app/"
                         title="Proffy - Hospedagem"
                         target="_blank" rel="noreferrer"
-                        ><i class="fab fa-github"></i
-                        ></a>
+                        ><FaGithub /></a>
                     </div>
                     <div class="portfolio-info">
                         <h4>Proffy</h4>

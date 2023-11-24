@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import {v4 as uuidV4} from 'uuid'
+import { IoCodeSlash } from "react-icons/io5";
 
 import "./styles.css";
 
@@ -31,12 +32,12 @@ function NavBar() {
         <div className="nav-container">
           <a href="/" className="nav-logo">
             Gabriel Brune
-            <i className="fas fa-code"></i>
+            <IoCodeSlash color="#6B4798" />
           </a>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             {items?.map((item)=>(
-              <li className="nav-item">
+              <li className="nav-item" key={uuidV4()}>
                 <a
                   href={item.link}
                   activeClassName="active"

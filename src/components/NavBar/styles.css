@@ -27,6 +27,9 @@
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
+
+  display: flex;
+  grid-gap: 12px; 
 }
 
 .nav-menu {
