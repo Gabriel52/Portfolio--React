@@ -22,7 +22,7 @@ export const PORTUGUESE_LANGUAGE =  {
             secondSentence: "Estou cursando ciência da computação na Anhembi Morumbi. Me formei em Sistema de Informação na Etec de Embu das Artes",
             thirdSentence: "Na minha rotina utilizo essas tecnologias",
             resumeButton: 'Confira meu CV',
-            linkMyResume: 'https://drive.google.com/file/d/143Ph0NvN90u4XwMhhgoRqszyjLcjN3l2/view?usp=sharing'
+            linkMyResume: 'https://drive.google.com/file/d/1zHaM_zVSOqUQIS64-vLfyWsSasH2bLu-/view?usp=sharing'
         },
             technologies: {
             title: 'Tecnologias',

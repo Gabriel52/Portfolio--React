@@ -22,7 +22,7 @@ export const ENGLISH_LANGUAGE =  {
         secondSentence: "I've been attending the computer science at Anhembi Morumbi UNiversity. I graduated Information System at Etec in Embu das Artes",
         thirdSentence: "In my routine I use these technologies",
         resumeButton: 'check my resume',
-        linkMyResume: 'https://drive.google.com/file/d/1cEiR44stBjpV9KsSNd2jwsOTxdqxEvPR/view?usp=sharing'
+        linkMyResume: 'https://drive.google.com/file/d/1Xijod7iWw9a412hJ8uF5r6pq9yTs8lXy/view?usp=sharing'
         },
         technologies: {
         title: 'Technologies',
