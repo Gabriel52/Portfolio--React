@@ -29,7 +29,7 @@ export const ContactServices = () => {
                             <GrMapLocation className='' />
                         </i>
                     <h4>{translate('contact.location')}:</h4>
-                    <p>Embu das Artes - SP, Brasil</p>
+                    <p>Taboão da Serra - SP, Brasil</p>
                     </div>
         
                     <div class="email">
