@@ -10,34 +10,34 @@ export const Footer = () => {
 
     return (
         <footer id="footer">
-            <section id="social" class="social">
-            <div class="footer-top">
-                <div class="container">
+            <section id="social" className="social">
+            <div className="footer-top">
+                <div className="container">
                 <div
-                    class="row justify-content-center"
+                    className="row justify-content-center"
                     data-aos="fade-up"
                     data-aos-delay="400"
                 >
-                    <div class="footer-links">
+                    <div className="footer-links">
                     <p>{translate('network.title')}:</p>
-                    <div class="social-links">
+                    <div className="social-links">
                         <a 
                             target="_blank" 
                             href="https://www.linkedin.com/in/gabriel-brune-dos-santos-032b9717a/" rel="noreferrer"
                         >
-                            <img src={LinkedinImg} alt="Linkedin logo"/>
+                            <img src={LinkedinImg} alt="Linkedin logo" loading="lazy" decoding="async" />
                         </a>
                         <a 
                             target="_blank" 
                             href="https://api.whatsapp.com/send?phone=5511960188549&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20voc%C3%AA." rel="noreferrer"
                         >
-                            <img src={WhatsappImg} alt="Whatsapp logo"/>
+                            <img src={WhatsappImg} alt="Whatsapp logo" loading="lazy" decoding="async" />
                         </a>
                         <a 
                             target="_blank" 
                             href="https://github.com/Gabriel52" rel="noreferrer"
                         >
-                            <img src={GitHubImg} alt="Github logo"/>
+                            <img src={GitHubImg} alt="Github logo" loading="lazy" decoding="async" />
                         </a>
                     </div>
                     </div>
@@ -46,8 +46,8 @@ export const Footer = () => {
             </div>
             </section>
     
-            <div class="container py-4">
-            <div class="copyright">
+            <div className="container py-4">
+            <div className="copyright">
                 &copy; Copyright <strong><span>Gabriel Brune</span></strong> 2022
             </div>
             </div>

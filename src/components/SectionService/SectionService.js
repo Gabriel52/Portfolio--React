@@ -1,32 +1,11 @@
-
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import './styles.css'
+import './styles.css';
 
+export const SectionService = () => {
+    const { t: translate } = useTranslation();
+    const technologiesList = translate("technologies.listTechnologies") ?? [];
 
-export const SectionService = ()=> {
-    const { t: translate} = useTranslation()
-    const [technologiesList, setTechnologiesList] = useState()
-    const addReveal = () => {
-        const reveals = document.querySelectorAll('.reveal');
-        reveals.forEach((reveal, index) => {
-            let windowHeight = window.innerHeight;
-            let revealTop = reveals[index].getBoundingClientRect().top
-            let revealPoint = 150;
-            if(revealTop < windowHeight - revealPoint){
-                reveals[index].classList.add('active');
-            }else{
-                reveals[index].classList.remove('active');
-            }
-        })
-    }
-    window.addEventListener('scroll', addReveal)
-
-    useEffect(()=>{
-        setTechnologiesList(translate("technologies.listTechnologies"))
-    },[translate])
-    
     return (
         <section id="services" className="services">
             <div className="container service">
@@ -36,7 +15,7 @@ export const SectionService = ()=> {
             </div>
 
             <div className="service_content-card">
-                {technologiesList?.map((technologiesItem) =>(
+                {technologiesList.map((technologiesItem) => (
                     <div
                         className="align-items-stretch reveal"
                         key={technologiesItem.id}

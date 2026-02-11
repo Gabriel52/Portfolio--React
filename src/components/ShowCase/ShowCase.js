@@ -6,7 +6,7 @@ export const ShowCase = () => {
     const { t: translate } = useTranslation();
 
     return (
-        <div className="show-case">
+        <div id="home" className="show-case">
             <div className="show-case__logo-mobile">
                 <img src={ShowCaseImg} alt=""/>
             </div>

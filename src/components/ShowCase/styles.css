@@ -44,6 +44,16 @@ h1{
     transform: scale(1.2);
 }
 
+/* Reserve space for LCP image to avoid CLS */
+.show-case__logo img,
+.show-case__logo-mobile img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1;
+    display: block;
+}
+
 .show-case__logo-mobile {
     display: none;
 }
@@ -67,6 +77,9 @@ h1{
         width: 300px;
         margin: 0 auto;
         display: block;
+    }
+    .show-case__logo img {
+        max-width: 300px;
     }
     .show-case__logo {
         display: none;

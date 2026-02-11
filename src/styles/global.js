@@ -1,13 +1,25 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyled = createGlobalStyle`
-    body {
-        margin: 0;
-        padding: 0;
+    :root {
+        --background: #ffffff;
+        --color-primary: #6B4798;
+        --color-primary-hover: #6b4798b8;
+        --color-text-muted: #5A6570;
+        --color-text-dark: #4e4039;
+    }
+
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
     html {
+        scroll-behavior: smooth;
         @media (max-width: 1080px) {
             font-size: 93.75%; //15px
         }
@@ -18,7 +30,7 @@ export const GlobalStyled = createGlobalStyle`
 
     body {
         background: var(--background);
-        -webkit-smoothing:antialiased;
+        -webkit-font-smoothing: antialiased;
     }
 
     button {

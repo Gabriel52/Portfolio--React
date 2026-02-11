@@ -1,23 +1,9 @@
-import './styles.css'
-import WebDeveloperImg from '../../assets/webDeveloper.gif'
+import './styles.css';
+import WebDeveloperImg from '../../assets/webDeveloper.gif';
 import { useTranslation } from 'react-i18next';
+
 export const AboutSection = () => {
     const { t: translate } = useTranslation();
-
-    const addReveal = () => {
-        const reveals = document.querySelectorAll('.reveal');
-        reveals.forEach((reveal, index) => {
-            let windowHeight = window.innerHeight;
-            let revealTop = reveals[index].getBoundingClientRect().top
-            let revealPoint = 150;
-            if(revealTop < windowHeight - revealPoint){
-                reveals[index].classList.add('active');
-            }else{
-                reveals[index].classList.remove('active');
-            }
-        })
-    }
-    window.addEventListener('scroll', addReveal)
 
     return (
         <>
@@ -27,7 +13,7 @@ export const AboutSection = () => {
                         <div
                             className="about_content-img"
                         >
-                            <img src={WebDeveloperImg} alt="gif demonstrativo"/>
+                            <img src={WebDeveloperImg} alt="gif demonstrativo" loading="lazy" decoding="async" />
                         </div>
                         <div className="about_content-phrase">
                         <h3 data-aos="fade-up">{translate('aboutMe.title')}</h3>

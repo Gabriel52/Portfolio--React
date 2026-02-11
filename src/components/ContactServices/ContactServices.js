@@ -4,41 +4,26 @@ import { GrMapLocation } from "react-icons/gr";
 import { BiLogoGmail } from "react-icons/bi";
 import { MdPhoneInTalk } from "react-icons/md";
 
-import './styles.css'
+import './styles.css';
 
 export const ContactServices = () => {
-    const { t:translate } = useTranslation();
-    
-    const addReveal = () => {
-        const reveals = document.querySelectorAll('.reveal');
-        reveals.forEach((reveal, index) => {
-            let windowHeight = window.innerHeight;
-            let revealTop = reveals[index].getBoundingClientRect().top
-            let revealPoint = 150;
-            if(revealTop < windowHeight - revealPoint){
-                reveals[index].classList.add('active');
-            }else{
-                reveals[index].classList.remove('active');
-            }
-        })
-    }
-    window.addEventListener('scroll', addReveal)
+    const { t: translate } = useTranslation();
 
     return (
-        <section id="contact" class="contact">
-            <div class="container">
-            <div class="section-title reveal" data-aos="fade-up">
+        <section id="contact" className="contact">
+            <div className="container">
+            <div className="section-title reveal" data-aos="fade-up">
                 <h2>{translate('contact.title')}</h2>
                 <p>{translate('contact.subtitle')}</p>
             </div>
         
-            <div class="contact__content">
+            <div className="contact__content">
                 <div
-                class="col-lg-5 d-flex align-items-stretch justify-content-center"
+                className="col-lg-5 d-flex align-items-stretch justify-content-center"
                 data-aos="fade-up"
                 data-aos-delay="100"
                 >
-                <div class="info reveal">
+                <div className="info reveal">
                     <div class="address">
                         <i>
                             <GrMapLocation className='' />

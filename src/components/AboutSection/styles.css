@@ -35,6 +35,15 @@
     background-color: #f0f0f5;
 }
 
+/* Reserve space for image to avoid CLS */
+.about_content-img img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    display: block;
+}
+
 .reveal{
     position: relative;
     transform: translateY(150px);
@@ -56,8 +65,9 @@
     }
     .about_content-img img {
         width: 300px;
+        max-width: 100%;
         margin: 0 auto;
-        display: block;        
+        display: block;
     }
     .btn-get-cv {
         width: 84%;

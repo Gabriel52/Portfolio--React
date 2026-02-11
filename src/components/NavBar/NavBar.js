@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {v4 as uuidV4} from 'uuid'
 import { IoCodeSlash } from "react-icons/io5";
 
 import "./styles.css";
@@ -12,10 +11,21 @@ const languageKey = {
 
 function NavBar() {
   const [click, setClick] = useState(false);
-  const { t:translate } = useTranslation() 
-  const [items, setItems] = useState();
-  const { i18n } = useTranslation()
+  const { t: translate, i18n } = useTranslation();
+  const items = translate('header.items') ?? [];
   const handleClick = () => setClick(!click);
+
+  const handleNavClick = (e, link) => {
+    if (link.startsWith("/#") && link.length > 2) {
+      const id = link.slice(2);
+      const element = document.getElementById(id);
+      if (element) {
+        e.preventDefault();
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    setClick(false);
+  };
   const [languageSelected, setLanguageSelected] = useState('ptBr')
   const handleChangeLanguages = () =>{
     let selectedItem = languageSelected === 'ptBr'? 'enUs' : 'ptBr' 
@@ -23,9 +33,6 @@ function NavBar() {
     i18n.changeLanguage(selectedItem);
     
   }
-  useEffect(()=>{
-    setItems(translate('header.items'))
-  },[translate])
   return (
     <>
       <nav className="navbar">
@@ -36,13 +43,13 @@ function NavBar() {
           </a>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            {items?.map((item)=>(
-              <li className="nav-item" key={uuidV4()}>
+            {items.map((item) => (
+              <li className="nav-item" key={item.link}>
                 <a
                   href={item.link}
                   activeClassName="active"
                   className="nav-links"
-                  onClick={handleClick}
+                  onClick={(e) => handleNavClick(e, item.link)}
                 >
                   {item.name}
                 </a>

@@ -19,7 +19,7 @@ export const ENGLISH_LANGUAGE =  {
         aboutMe: {
         title: "About me",
         firstSentence: "I'm a full stack developer, but currently I've been working as a front-end developer at Zenvia company.",
-        secondSentence: "I've been attending the computer science at Anhembi Morumbi UNiversity. I graduated Information System at Etec in Embu das Artes",
+        secondSentence: "I'm studying computer science at Anhembi Morumbi University. I graduated in Information Systems at Etec in Embu das Artes",
         thirdSentence: "In my routine I use these technologies",
         resumeButton: 'check my resume',
         linkMyResume: 'https://drive.google.com/file/d/1Xijod7iWw9a412hJ8uF5r6pq9yTs8lXy/view?usp=sharing'
@@ -29,13 +29,13 @@ export const ENGLISH_LANGUAGE =  {
         subtitle: 'Check the technologies I use the most',
         listTechnologies: [
             {id: '1', name: 'Next JS', description: 'It allows React development, front end and back end applications.'},
-            {id: '2', name: 'Typescript', description: "TypeScript adds additional syntax to JavaScript to support a tighter integration with your editor. It catch's early errors in your editor."},
+            {id: '2', name: 'Typescript', description: "TypeScript adds additional syntax to JavaScript to support a tighter integration with your editor. It catches early errors in your editor."},
             {id: '3', name: 'Sass', description: "Sass is a CSS pre-processor. It's completely compatible with all versions of CSS."},
-            {id: '4', name: 'Javascript', description: ' One of the most widely used programming languages nowadays.'},
+            {id: '4', name: 'Javascript', description: 'One of the most widely used programming languages nowadays.'},
             {id: '5', name: 'React Js', description: 'Library used to build user interface (UI).'},
             {id: '6', name: 'React Native', description: 'Framework for native development for Android and IOS applications.'},
             {id: '7', name: 'Git', description: 'It is a distributed version control system.'},
-            {id: '8', name: 'Node JS', description: "It'is a platform on which it is possible to create Javascript applications without depending on a browser for execution."},
+            {id: '8', name: 'Node JS', description: "It is a platform on which it is possible to create Javascript applications without depending on a browser for execution."},
         ]
         },
         projects: {

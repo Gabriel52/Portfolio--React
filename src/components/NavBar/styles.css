@@ -46,6 +46,11 @@
   height: 100%;
   border-bottom: 3px solid transparent;
 }
+
+.nav-links:focus-visible {
+  outline: 2px solid #6B4798;
+  outline-offset: 2px;
+}
 .fa-code {
   margin-left: 1rem;
 }
@@ -123,6 +128,11 @@
 }
 .toggle:focus {
   outline: transparent;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid #6B4798;
+  outline-offset: 2px;
 }
 .toggle {
   border-radius: 0.75em;

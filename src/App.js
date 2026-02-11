@@ -8,9 +8,9 @@ import './i18n'
 import { useEffect } from "react";
 
 function App() {
-  useEffect(()=>{
+  useEffect(() => {
     ReactGA.initialize(process.env.REACT_APP_ID_METRIC_GA);
-  })
+  }, []);
 
   return (
     <>

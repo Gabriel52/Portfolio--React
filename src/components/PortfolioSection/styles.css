@@ -50,11 +50,16 @@
     transition: all ease-in-out 0.3s;
     z-index: 2;
 }
+/* Reserve space to avoid CLS when images load */
 .portfolio .portfolio-wrap img {
     transition: 0.3s;
     position: relative;
     z-index: 1;
     width: 450px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
 }
 .portfolio .portfolio-wrap .portfolio-links {
     opacity: 0;
