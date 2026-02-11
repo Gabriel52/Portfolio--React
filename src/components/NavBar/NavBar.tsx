@@ -4,18 +4,25 @@ import { IoCodeSlash } from "react-icons/io5";
 
 import "./styles.css";
 
-const languageKey = {
+const languageKey: Record<string, string> = {
   ptBr: 'English',
   enUs: 'Português'
+};
+
+interface NavItem {
+  name: string;
+  link: string;
 }
 
 function NavBar() {
   const [click, setClick] = useState(false);
   const { t: translate, i18n } = useTranslation();
-  const items = translate('header.items') ?? [];
+  const items: NavItem[] = (translate('header.items') ?? []) as NavItem[];
+  const [languageSelected, setLanguageSelected] = useState<'ptBr' | 'enUs'>('ptBr');
+
   const handleClick = () => setClick(!click);
 
-  const handleNavClick = (e, link) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
     if (link.startsWith("/#") && link.length > 2) {
       const id = link.slice(2);
       const element = document.getElementById(id);
@@ -26,13 +33,13 @@ function NavBar() {
     }
     setClick(false);
   };
-  const [languageSelected, setLanguageSelected] = useState('ptBr')
-  const handleChangeLanguages = () =>{
-    let selectedItem = languageSelected === 'ptBr'? 'enUs' : 'ptBr' 
-    setLanguageSelected(selectedItem)
+
+  const handleChangeLanguages = () => {
+    const selectedItem = languageSelected === 'ptBr' ? 'enUs' : 'ptBr';
+    setLanguageSelected(selectedItem);
     i18n.changeLanguage(selectedItem);
-    
-  }
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -47,29 +54,28 @@ function NavBar() {
               <li className="nav-item" key={item.link}>
                 <a
                   href={item.link}
-                  activeClassName="active"
                   className="nav-links"
                   onClick={(e) => handleNavClick(e, item.link)}
                 >
                   {item.name}
                 </a>
-              </li>  
+              </li>
             ))}
-            <input 
-              className="toggle" 
-              type="checkbox" 
-              role="switch" 
-              name="toggle" 
-              value="on" 
+            <input
+              className="toggle"
+              type="checkbox"
+              role="switch"
+              name="toggle"
+              value="on"
               onClick={handleChangeLanguages}
             />
             <div className="curtain">
               <p className="selected-language">
                 {languageKey[languageSelected]}
                 {languageSelected !== 'ptBr' ? (
-                    <img  src='/images/brazil.png' alt="Brazil's Flag" />
-                  ): (
-                    <img  src='/images/united-states.png' alt="United States Flag" />
+                  <img src='/images/brazil.png' alt="Brazil's Flag" />
+                ) : (
+                  <img src='/images/united-states.png' alt="United States Flag" />
                 )}
               </p>
             </div>

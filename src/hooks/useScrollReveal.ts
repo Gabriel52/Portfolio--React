@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 
 const REVEAL_POINT = 150;
 
-function runReveal() {
+function runReveal(): void {
   const reveals = document.querySelectorAll('.reveal');
   const windowHeight = window.innerHeight;
-  reveals.forEach((el, index) => {
+  reveals.forEach((_, index) => {
     const revealTop = reveals[index].getBoundingClientRect().top;
     if (revealTop < windowHeight - REVEAL_POINT) {
       reveals[index].classList.add('active');
@@ -19,10 +19,10 @@ function runReveal() {
  * Single scroll listener for .reveal elements. Throttled with requestAnimationFrame.
  * Call once in a parent (e.g. App or Container) so the whole app shares one listener.
  */
-export function useScrollReveal() {
+export function useScrollReveal(): void {
   useEffect(() => {
     let ticking = false;
-    const onScroll = () => {
+    const onScroll = (): void => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           runReveal();
